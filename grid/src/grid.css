@@ -7,3 +7,21 @@
 body {
     background: #2C3333;
 }
+
+.product-img {
+    max-width: 200px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.form {
+    border-radius: 20px;
+    box-shadow: 5px 5px 4px 5px #fdfbfb;
+    max-width: 85%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
