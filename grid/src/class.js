@@ -11,7 +11,7 @@ import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
 function ClassForm() {
   return (
     <Container>
-      <div className="display-4 text-md-center text-light mb-3">
+      <div className="display-4 text-md-center mb-3 text-light">
         Add New Class
       </div>
 
