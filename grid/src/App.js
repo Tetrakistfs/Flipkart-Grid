@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { useState, useEffect } from "react";
 import fire from "./firebase";
 
+
 function App() {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
@@ -79,6 +80,8 @@ function App() {
       {user ? (
         <div>
           <Navbar handlelogout={handlelogout} />
+          
+          
         </div>
       ) : (
         <div>
