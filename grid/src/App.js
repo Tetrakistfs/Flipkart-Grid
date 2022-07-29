@@ -6,6 +6,9 @@ import fire from "./firebase";
 import ProductDetail from "./components/ProductDetail";
 import UserInfo from "./user";
 import Grid from "./grid";
+import Seller from "./seller";
+import ObjectForm from "./object";
+import ClassForm from "./class";
 
 function App() {
   const [user, setUser] = useState("");
@@ -82,7 +85,12 @@ function App() {
       {user ? (
         <div>
           <Navbar handlelogout={handlelogout} />
-          <UserInfo />
+          {/* <UserInfo /> */}
+          {/* <Seller /> */}
+          {/* <ObjectForm /> */}
+          {/* <Grid /> */}
+          {/* <ClassForm /> */}
+          {/* <ProductDetail /> */}
         </div>
       ) : (
         <div>

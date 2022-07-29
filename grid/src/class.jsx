@@ -11,14 +11,14 @@ import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
 function ClassForm() {
   return (
     <Container>
-      <div className="display-4 text-md-center mb-3 text-light">
+      <div className="display-4 text-md-center mb-3 text-warning">
         Add New Class
       </div>
 
-      <div className="bg-light px-5 py-3 mx-auto my-5 form">
+      <div className="px-5 py-3 mx-auto my-5 userCard form">
         <Form>
           <FloatingLabel
-            className="mb-3 mt-4 text-primary"
+            className="mb-3 mt-4 text-dark"
             label="Product Name"
             controlId=""
           >
@@ -26,7 +26,7 @@ function ClassForm() {
           </FloatingLabel>
 
           <FloatingLabel
-            className="mb-3 text-primary"
+            className="mb-3 text-dark"
             label="Serial Number"
             controlId=""
           >
@@ -34,7 +34,7 @@ function ClassForm() {
           </FloatingLabel>
 
           <FloatingLabel
-            className="mb-3 text-primary"
+            className="mb-3 text-dark"
             label="Image URL"
             controlId=""
           >
@@ -43,7 +43,7 @@ function ClassForm() {
           <Row className="mb-3">
             <Col sm={6}>
               <FloatingLabel
-                className="mb-3 text-primary"
+                className="mb-3 text-dark"
                 label="Warranty Period (in months)"
                 controlId=""
               >
@@ -57,7 +57,7 @@ function ClassForm() {
             </Col>
             <Col sm={6}>
               <FloatingLabel
-                className="mb-3 text-primary"
+                className="mb-3 text-dark"
                 label="Price (INR)"
                 controlId=""
               >
@@ -72,7 +72,7 @@ function ClassForm() {
           </Row>
 
           <Row className="mb-2 px-2">
-            <Button variant="outline-primary" size="lg">
+            <Button variant="primary" size="lg" active>
               Submit
             </Button>
           </Row>

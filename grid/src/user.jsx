@@ -20,13 +20,12 @@ const UserInfo = () => {
 function UserGrid() {
   return (
     <Container fluid="md my-5">
-      <p className="display-4 text-light mb-5 border-bottom">Registered Prodcuts </p>
+      <p className="display-4 text-warning mb-5 border-bottom">Registered Prodcuts </p>
       <Row xs={1} md={2} lg={4} className="g-4 justify-content-md-between">
         {Array.from({ length: 4 }).map((_, idx) => (
           <Col>
             <Card
-              border="primary"
-              className="mx-auto"
+              className="userCard mx-auto"
               style={{ width: "auto" }}
             >
               <Card.Header>Header</Card.Header>
@@ -50,21 +49,24 @@ function UserGrid() {
 
 function RedeemNft() {
   return (
-    <Container fluid="md my-5" className="redeem">
-      <div className="display-5 mt-3 text-light text-md-start">
+    <Container fluid="md my-5" className="redeem outline">
+      <div className="display-5 ms-md-4 mt-3 text-warning text-md-start">
         <p>Redeem a new NFT</p>
       </div>
-      <Form>
-            <FloatingLabel
-              className="mb-4 mt-4 text-primary"
-              label="NFT Id"
-              controlId=""
-            >
-            <Form.Control size="lg" type="text" placeholder="#GamerGirlBathWater" />
-            </FloatingLabel>
-            <Button variant="outline-light" type="submit" size="lg" className="button mb-3">Redeem</Button>
-          
-      </Form>
+      <Row md className="ms-md-3">
+        <Col md={6}>
+        <Form>
+              <FloatingLabel
+                className="mb-4 mt-4"
+                label="Enter your NFT Id"
+                controlId=""
+              >
+              <Form.Control size="lg" type="text" placeholder="#GamerGirlBathWater" />
+              </FloatingLabel>
+              <Button variant="primary" type="submit" size="lg" className="button mb-3" active>Redeem</Button> 
+        </Form>
+        </Col>
+      </Row>
     </Container>
   );
 }

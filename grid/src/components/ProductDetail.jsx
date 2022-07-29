@@ -9,7 +9,7 @@ import Container from "react-bootstrap/esm/Container";
 function ProductDetail() {
   return (
     <Container fluid="md my-4 mt-md-5 py-3">
-      <Card className="mx-auto py-3" style={{width: "auto"}}>
+      <Card className="mx-auto py-3 userCard form" style={{width: "auto"}}>
         <Card.Body style={{width: "auto"}}>
           <div className="flex">
             <Card.Img
@@ -39,11 +39,11 @@ function ProductDetail() {
               <li className="list-inline-item">Delivered To:</li>
               <li className="list-inline-item">#69</li>
           </p>
-          <Row className="my-3 ms-2">
-            <Button variant="success" size="lg" className="d-md-block me-4 mb-3 text-dark">
+          <Row className="my-3 mx-auto" style={{width:"95%"}}>
+            <Button variant="primary" size="lg" className="d-md-block  mb-3 text-light" active>
               Authenticity
             </Button>
-            <Button variant="danger" size="lg" className="d-md-block me-4 mb-3 text-dark">
+            <Button variant="primary" size="lg" className="d-md-block me-4 mb-3 text-light" active>
               Change Ownership
             </Button>
           </Row>

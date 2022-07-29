@@ -16,7 +16,7 @@ const Seller = () => {
 function SellerCard() {
   return (
     <Container fluid="md my-4">
-      <Card className="mx-auto" style={{ width: "auto" }}>
+      <Card className="userCard mx-auto" style={{ width: "auto" }}>
         <Card.Body>
           <div className="flex">
             <img
@@ -31,7 +31,7 @@ function SellerCard() {
           <p className="fs-5 text-md-start mt-md-3 mb-3">
             1 din rah gya h mje to thik nhi lag rha.....
           </p>
-          <Button variant="primary" size="lg" className="text-dark">
+          <Button variant="primary" size="lg" className="text-dark" active>
             Add Product
           </Button>
         </Card.Body>
@@ -42,7 +42,7 @@ function SellerCard() {
 function ClassButton() {
   return (
     <div className="d-flex justify-content-center mb-2">
-      <Button variant="outline-light" size="lg">
+      <Button variant="primary" size="lg">
         + Add New Class
       </Button>
     </div>
