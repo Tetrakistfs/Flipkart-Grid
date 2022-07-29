@@ -18,18 +18,20 @@ function SellerCard() {
     <Container fluid="md my-4">
       <Card className="mx-auto" style={{ width: "auto" }}>
         <Card.Body>
-          <img
-            className="product-img"
-            variant="top"
-            src="https://i.ytimg.com/an_webp/4PK2hyaCNj8/mqdefault_6s.webp?du=3000&sqp=CIP5g5cG&rs=AOn4CLC_bSxcfEqBWxCAqy2ve1CuFD76hg"
-          />
-          <p className="display-6 d-md-inline text-md-start ms-md-4 py-3">
-            Backend kab chalu hga
+          <div className="flex">
+            <img
+              className="product-img"
+              variant="top"
+              src="https://i0.wp.com/getcomics.info/share/uploads/2022/07/Michel-Vaillant-11-Cannonball-2022.jpg?fit=400%2C544&ssl=1"
+            />
+            <p className="display-6 d-md-inline text-md-start ms-md-4 py-3">
+              Backend kab chalu hga
+            </p>
+          </div>
+          <p className="fs-5 text-md-start mt-md-3 mb-3">
+            1 din rah gya h mje to thik nhi lag rha.....
           </p>
-          <p className="fs-5 text-md-start mt-md-3">
-            2 din rah gye h mje to thik nhi lag rha.....
-          </p>
-          <Button variant="primary" size="lg">
+          <Button variant="primary" size="lg" className="text-dark">
             Add Product
           </Button>
         </Card.Body>

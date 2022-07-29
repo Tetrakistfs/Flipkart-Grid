@@ -9,7 +9,7 @@ body {
 }
 
 .product-img {
-    max-width: 200px;
+    max-width: 250px;
     height: 100%;
     object-fit: contain;
 }
@@ -18,6 +18,12 @@ body {
     border-radius: 20px;
     box-shadow: 5px 5px 4px 5px #fdfbfb;
     max-width: 85%;
+}
+
+.redeem {
+    border-radius: 10px;
+    border: 1px solid white;
+    min-height: 100px;
 }
 
 input::-webkit-outer-spin-button,
