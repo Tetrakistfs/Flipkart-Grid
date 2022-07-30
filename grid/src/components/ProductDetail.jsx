@@ -30,7 +30,7 @@ function ProductDetail() {
                 <li className="list-inline-item">#69</li>
               </p>
               <p className="text-md-start ms-4 mt-2 ">
-                <li className="list-inline-item">Retailor</li>
+                <li className="list-inline-item">Retailer</li>
                 <li className="list-inline-item">#69</li>
               </p>
             </div>

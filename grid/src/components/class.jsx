@@ -4,11 +4,19 @@ import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
 import Container from "react-bootstrap/esm/Container";
 import Form from "react-bootstrap/Form";
+import { useState } from "react";
 import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
 
 // product name, serial Number, image URL, warranty period, price
 
 function ClassForm() {
+  const [form,setForm] = useState({});
+  const setField =  (field,value) => {
+      setForm({
+        ...form,
+        [field]:value
+      })
+  }
   return (
     <Container>
       <div className="display-4 text-md-center mb-3 text-warning">
@@ -22,7 +30,7 @@ function ClassForm() {
             label="Product Name"
             controlId=""
           >
-            <Form.Control size="lg" type="text" placeholder="Tetrakis" />
+            <Form.Control size="lg" type="text" placeholder="Tetrakis"  value={form.productName} onChange={(e) => setField('productname',e.target.value)}/>
           </FloatingLabel>
 
           <FloatingLabel
@@ -30,7 +38,7 @@ function ClassForm() {
             label="Serial Number"
             controlId=""
           >
-            <Form.Control size="lg" type="text" placeholder="123456789" />
+            <Form.Control size="lg" type="text" placeholder="123456789" value={form.serial} onChange={(e) => setField('serialnumber',e.target.value)}/>
           </FloatingLabel>
 
           <FloatingLabel
@@ -38,7 +46,7 @@ function ClassForm() {
             label="Image URL"
             controlId=""
           >
-            <Form.Control size="lg" type="url" placeholder="xyz.com" />
+            <Form.Control size="lg" type="url" placeholder="xyz.com" value={form.image} onChange={(e) => setField('image',e.target.value)}/>
           </FloatingLabel>
           <Row className="mb-3">
             <Col sm={6}>
@@ -52,6 +60,7 @@ function ClassForm() {
                   type="number"
                   min="0"
                   placeholder="12"
+                  value={form.warranty} onChange={(e) => setField('warrantyperiod',e.target.value)}
                 />
               </FloatingLabel>
             </Col>
@@ -66,6 +75,7 @@ function ClassForm() {
                   type="number"
                   min="0"
                   placeholder="99.9"
+                  value={form.price} onChange={(e) => setField('price',e.target.value)}
                 />
               </FloatingLabel>
             </Col>
