@@ -30,7 +30,7 @@ function ClassForm() {
             label="Product Name"
             controlId=""
           >
-            <Form.Control size="lg" type="text" placeholder="Tetrakis"  value={form.productName} onChange={(e) => setField('productname',e.target.value)}/>
+            <Form.Control size="lg" type="text" placeholder="Name"  value={form.productName} onChange={(e) => setField('productname',e.target.value)}/>
           </FloatingLabel>
 
           <FloatingLabel
@@ -46,7 +46,7 @@ function ClassForm() {
             label="Image URL"
             controlId=""
           >
-            <Form.Control size="lg" type="url" placeholder="xyz.com" value={form.image} onChange={(e) => setField('image',e.target.value)}/>
+            <Form.Control size="lg" type="url" placeholder="abc.com" value={form.image} onChange={(e) => setField('image',e.target.value)}/>
           </FloatingLabel>
           <Row className="mb-3">
             <Col sm={6}>
@@ -59,7 +59,7 @@ function ClassForm() {
                   size="lg"
                   type="number"
                   min="0"
-                  placeholder="12"
+                  placeholder="0"
                   value={form.warranty} onChange={(e) => setField('warrantyperiod',e.target.value)}
                 />
               </FloatingLabel>
@@ -74,7 +74,7 @@ function ClassForm() {
                   size="lg"
                   type="number"
                   min="0"
-                  placeholder="99.9"
+                  placeholder="0"
                   value={form.price} onChange={(e) => setField('price',e.target.value)}
                 />
               </FloatingLabel>
