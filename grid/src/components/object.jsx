@@ -85,7 +85,7 @@ const sendEmail = () => {
                 label="Name"
                 name="name"
               >
-                <Form.Control size="lg" type="text" placeholder="" value={form.firstName} onChange={(e) => setField('firstname',e.target.value)}/>
+                <Form.Control size="lg" type="text" placeholder="" value={form.firstName} onChange={(e) => setField('name',e.target.value)}/>
               </FloatingLabel>
             </Col>
             <Col md={6}>

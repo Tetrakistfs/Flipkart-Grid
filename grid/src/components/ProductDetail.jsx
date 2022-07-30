@@ -39,14 +39,14 @@ function ProductDetail() {
               <li className="list-inline-item">Delivered To:</li>
               <li className="list-inline-item">#69</li>
           </p>
-          <Row className="my-3 mx-auto" style={{width:"95%"}}>
+          {/* <Row className="my-3 mx-auto" style={{width:"95%"}}>
             <Button variant="primary" size="lg" className="d-md-block  mb-3 text-light" active>
               Authenticity
             </Button>
             <Button variant="primary" size="lg" className="d-md-block me-4 mb-3 text-light" active>
               Change Ownership
             </Button>
-          </Row>
+          </Row> */}
         </Card.Body>
       </Card>
   </Container> 

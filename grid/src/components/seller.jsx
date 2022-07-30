@@ -24,17 +24,25 @@ function SellerCard({navigate}) {
             <img
               className="product-img"
               variant="top"
-              src="https://i0.wp.com/getcomics.info/share/uploads/2022/07/Michel-Vaillant-11-Cannonball-2022.jpg?fit=400%2C544&ssl=1"
+              src="https://in.yamaha.com/en/files/slider_03_sp_3f68e3d70d748e34d427b26e2a16673d.jpg?impolicy=resize&imwid=1000&imhei=1000"
             />
-            <p className="display-6 d-md-inline text-md-start ms-md-4 py-3">
-              Backend kab chalu hga
-            </p>
+            <div className="flex flex-col">
+              <p className="display-6 d-md-inline text-md-start ms-md-4 py-3">
+                Casio Piano S-300
+              </p>
+              <p className="display-6 d-md-inline text-md-start ms-md-4 py-3">
+                Serial Number: 6789164
+              </p>
+              <p className="display-6 d-md-inline text-md-start ms-md-4 py-3">
+                Warranty Period: 24 months
+              </p>
+            </div>
           </div>
           <p className="fs-5 text-md-start mt-md-3 mb-3">
-            1 din rah gya h mje to thik nhi lag rha.....
+            25000 Rs.
           </p>
           <Button variant="primary" size="lg" className="text-dark" active onClick={() => {navigate("/seller/object")}}>
-            Add Product
+            Add Product Buyer
           </Button>
         </Card.Body>
       </Card>
@@ -45,7 +53,7 @@ function ClassButton({navigate}) {
   return (
     <div className="d-flex justify-content-center mb-2">
       <Button variant="primary" size="lg"  onClick={() => {navigate("/seller/class")}}>
-        + Add New Class
+        + Add New Product Class
       </Button>
     </div>
   );
