@@ -7,7 +7,7 @@ import Form from "react-bootstrap/Form";
 import { useState, useEffect, useRef } from "react";
 import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
 import axios from 'axios';
-
+import fire from '../firebase'
 // name, userid, email,timeofpurchase, retailor, manufacturer,order id, delivery address;
 
 function ObjectForm() {

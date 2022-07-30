@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Login = ({email,setEmail,password,setPassword,handlelogin,handlesignup,hasaccount,setHasAccount,emailerror,passworderror}) => {
+const Login = ({email,setEmail,password,setPassword,handlelogin,handlesignup,hasaccount,setHasAccount}) => {
+	console.log(email);
+	console.log(password);
 	return (
     <div class="">
 	<div

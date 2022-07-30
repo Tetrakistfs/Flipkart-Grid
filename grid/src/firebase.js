@@ -1,6 +1,10 @@
-import firebase from 'firebase';
-import {getFireStore} from 'firebase/firestore'
-
+import { initializeApp } from 'firebase/app';
+import {
+  getAuth, createUserWithEmailAndPassword,
+  signOut,signInWithEmailAndPassword,
+  onAuthStateChanged
+} from "firebase/auth"
+import { getFirestore } from "firebase/firestore"
 const firebaseConfig = {
   apiKey: "AIzaSyAPHAzhPB4U27brwu1ZTvQBmrLTbZWjeyE",
   authDomain: "grid-a3d83.firebaseapp.com",
@@ -11,6 +15,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const fire = firebase.initializeApp(firebaseConfig);
-export const db = getFireStore();
-export default fire;
+export const fire = initializeApp(firebaseConfig);
+export const db = getFirestore();
+export const auth = getAuth();
