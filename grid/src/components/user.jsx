@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import { ContractFactory, ethers } from "ethers";
 import axios from "axios";
-import Warranty from "../artifacts/contracts/Warranty.sol/Warranty.json";
+// import Warranty from "../artifacts/contracts/Warranty.sol/Warranty.json";
 
 
 
@@ -30,19 +30,24 @@ function UserGrid({navigate}) {
     <Container fluid="md my-5">
       <p className="display-4 text-warning mb-5 border-bottom">Registered Prodcuts </p>
       <Row xs={1} md={2} lg={4} className="g-4 justify-content-md-between">
-        {Array.from({ length: 4 }).map((_, idx) => (
+        {Array.from({ length: 1 }).map((_, idx) => (
           <Col>
             <Card
               className="userCard mx-auto"
               style={{ width: "auto" }}
               onClick={() => {navigate("/buyer/product")}}
             >
-              <Card.Header>Header</Card.Header>
+              <Card.Header>Sidhath Bhatla</Card.Header>
               <Card.Body>
-                <Card.Title>Primary Card Title</Card.Title>
+                <Card.Title>Casio S-200</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                 User ID-89719471
+                </Card.Text>
+                <Card.Text>
+                 Date of Purchase- 2022-07-21
+                </Card.Text>
+                <Card.Text>
+                  Manufacturer- Casio India, pvt ltd
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -99,29 +104,29 @@ function RedeemNft() {
     })
   }
 
-  async function getMintedStatus(){
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = provider.getSigner();
-    const contactAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-    const contract = new ethers.Contract(contactAddress, Warranty.abi, signer);
-    const result = await contract.isContentOwned(ipfshash);
-    console.log(result);
-  }
+  // async function getMintedStatus(){
+  //   const provider = new ethers.providers.Web3Provider(window.ethereum);
+  //   const signer = provider.getSigner();
+  //   const contactAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+  //   const contract = new ethers.Contract(contactAddress, Warranty.abi, signer);
+  //   const result = await contract.isContentOwned(ipfshash);
+  //   console.log(result);
+  // }
 
-  async function mintToken(){
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = provider.getSigner();
-    const contactAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-    const contract = new ethers.Contract(contactAddress, Warranty.abi, signer);
-    const connection = contract.connect(signer);
-    const addr = connection.address;
-    const result = await contract.payToMint(addr, ipfshash, {
-      value: ethers.utils.parseEther('0.05'),
-    })
+  // async function mintToken(){
+  //   const provider = new ethers.providers.Web3Provider(window.ethereum);
+  //   const signer = provider.getSigner();
+  //   const contactAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+  //   const contract = new ethers.Contract(contactAddress, Warranty.abi, signer);
+  //   const connection = contract.connect(signer);
+  //   const addr = connection.address;
+  //   const result = await contract.payToMint(addr, ipfshash, {
+  //     value: ethers.utils.parseEther('0.05'),
+  //   })
 
-    await result.wait();
-    getMintedStatus();
-  }
+  //   await result.wait();
+  //   getMintedStatus();
+  // }
 
   return (
     <Container fluid="md my-5" className="redeem outline">
@@ -143,7 +148,7 @@ function RedeemNft() {
               >
                 <Form.Control size="lg" type="text" placeholder="" value={ipfshash} onChange={(e) => setipfshash(e.target.value)}/>
               </FloatingLabel>
-              <Button variant="primary" type="submit" size="lg" className="button mb-3" onClick={mintToken} active>Redeem</Button> 
+              {/* <Button variant="primary" type="submit" size="lg" className="button mb-3" onClick={mintToken} active>Redeem</Button>  */}
         </Form>
         </Col>
         
