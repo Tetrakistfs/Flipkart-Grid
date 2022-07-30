@@ -4,11 +4,11 @@ import Navbar from "./components/Navbar";
 import { useState, useEffect } from "react";
 import fire from "./firebase";
 import ProductDetail from "./components/ProductDetail";
-import UserInfo from "./user";
-import Grid from "./grid";
-import Seller from "./seller";
-import ObjectForm from "./object";
-import ClassForm from "./class";
+import UserInfo from "./components/user";
+import Grid from "./components/grid";
+import Seller from "./components/seller";
+import ObjectForm from "./components/object";
+import ClassForm from "./components/class";
 
 function App() {
   const [user, setUser] = useState("");
@@ -33,6 +33,7 @@ function App() {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch((err) => {
+        // eslint-disable-next-line default-case
         switch (err.code) {
           case "auth/invalid-email":
           case "auth/user-disabled":
