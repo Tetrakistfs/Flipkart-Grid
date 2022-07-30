@@ -5,10 +5,14 @@ import Row from "react-bootstrap/esm/Row";
 import Container from "react-bootstrap/esm/Container";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
+import {db} from "./firebase.js";
+import { collection, addDoc } from "firebase/firestore";
+
 
 // product name, serial Number, image URL, warranty period, price
 
 function ClassForm() {
+  
   return (
     <Container>
       <div className="display-4 text-md-center mb-3 text-warning">

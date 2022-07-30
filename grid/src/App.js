@@ -89,7 +89,7 @@ function App() {
           {/* <Seller /> */}
           {/* <ObjectForm /> */}
           {/* <Grid /> */}
-          {/* <ClassForm /> */}
+          <ClassForm />
           {/* <ProductDetail /> */}
         </div>
       ) : (
