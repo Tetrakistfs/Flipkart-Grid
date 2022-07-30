@@ -3,6 +3,10 @@ import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
 import { useState, useEffect } from "react";
 import fire from "./firebase";
+import Seller from "./components/seller";
+import ObjectForm from "./components/object";
+import Grid from "./components/grid";
+
 
 function App() {
   const [user, setUser] = useState("");
@@ -79,6 +83,7 @@ function App() {
       {user ? (
         <div>
           <Navbar handlelogout={handlelogout} />
+          <Grid/>
         </div>
       ) : (
         <div>
