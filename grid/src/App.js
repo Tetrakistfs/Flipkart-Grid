@@ -85,12 +85,7 @@ function App() {
       {user ? (
         <div>
           <Navbar handlelogout={handlelogout} />
-          {/* <UserInfo /> */}
-          {/* <Seller /> */}
-          {/* <ObjectForm /> */}
-          {/* <Grid /> */}
-          <ClassForm />
-          {/* <ProductDetail /> */}
+          <Grid/>
         </div>
       ) : (
         <div>

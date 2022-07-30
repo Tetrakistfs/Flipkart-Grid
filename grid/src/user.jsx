@@ -1,5 +1,5 @@
 import React from "react";
-import "../src/grid.css";
+import "./components/grid.css";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

@@ -1,14 +1,14 @@
-import "./grid.css";
-
+import "./components/grid.css";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 
 const Seller = () => {
+
   return (
     <section>
-      <SellerCard />;
-      <ClassButton />;
+      <SellerCard/>;
+      <ClassButton/>;
     </section>
   );
 };
