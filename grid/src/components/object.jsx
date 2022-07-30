@@ -6,18 +6,54 @@ import Container from "react-bootstrap/esm/Container";
 import Form from "react-bootstrap/Form";
 import { useState, useEffect, useRef } from "react";
 import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
+import axios from 'axios';
 
 // name, userid, email,timeofpurchase, retailor, manufacturer,order id, delivery address;
 
 function ObjectForm() {
-  const [form,setForm] = useState({})
+  const [form,setForm] = useState({});
+  const [ipfshash, setipfshash] = useState("");
   const setField =  (field,value) => {
       setForm({
         ...form,
         [field]:value
       })
   }
+
+  async function uploadPinata() {
+    var data = JSON.stringify({
+      pinataOptions: {
+        cidVersion: 9,
+      },
+      pinataMetadata: {
+        name: form.productname,
+      },
+      pinataContent: {
+        form
+      },
+    });
+
+    var config = {
+      method: "post",
+      url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
+      headers: {
+        "Content-Type": "application/json",
+        pinata_api_key: "e735c704db2370ec6012",
+        pinata_secret_api_key:
+          "5ffc98620a7e74dcb83e29c143df50366402ea9d618726448d479b043b8d242c",
+      },
+      data: data,
+    };
+
+    const res = await axios(config);
+
+    console.log(res.data.IpfsHash);
+    setipfshash(res.data.IpfsHash);
+    console.log("ipfshash-> ", ipfshash);
+  }
+
   const handlesubmit = async(e) => {
+
     console.log(form);
     sendEmail();
   }
@@ -46,23 +82,22 @@ const sendEmail = () => {
             <Col md={5}>
               <FloatingLabel
                 className="mb-3 mt-4 text-dark"
-                label="First Name"
-                name="firstName"
+                label="Name"
+                name="name"
               >
-                <Form.Control size="lg" type="text" placeholder="Tetrakis" value={form.firstName} onChange={(e) => setField('firstname',e.target.value)}/>
+                <Form.Control size="lg" type="text" placeholder="" value={form.firstName} onChange={(e) => setField('firstname',e.target.value)}/>
               </FloatingLabel>
             </Col>
             <Col md={6}>
               <FloatingLabel
                 className="mb-3 mt-4 text-dark"
-                label="Last Name"
-                name="LasttName"
+                label="Product Name"
+                name="productName"
                 
                 controlId=""
               >
 
-                <Form.Control size="lg" type="text" placeholder="" value={form.LastName} onChange={(e) => setField('lastname',e.target.value)} />
-                <Form.Control size="lg" type="text" placeholder="tfs" />
+                <Form.Control size="lg" type="text" placeholder="" value={form.productName} onChange={(e) => setField('productname',e.target.value)} />
               </FloatingLabel>
             </Col>
           </Row>
@@ -70,7 +105,7 @@ const sendEmail = () => {
           <Row className="mb-3 justify-content-lg-between">
             <Col md={4}>
               <FloatingLabel
-                className="mb-3 text-dark"
+                className="mb-3 mt-4 text-dark"
                 label="Email"
                 controlId=""
                 name="Email"
@@ -85,20 +120,20 @@ const sendEmail = () => {
             </Col>
             <Col md={4}>
               <FloatingLabel
-                className="mb-3 text-dark"
+                className="mb-3 mt-4 text-dark"
                 label="User Id"
                 controlId=""
-                name="firstName"
+                name=""
                 
               >
-                <Form.Control size="lg" type="text" placeholder="Tetrakis" value={form.UserId} onChange={(e) => setField('userid',e.target.value)}/>
+                <Form.Control size="lg" type="text" placeholder="" value={form.UserId} onChange={(e) => setField('userid',e.target.value)}/>
               </FloatingLabel>
             </Col>
             <Col md={4}>
               <FloatingLabel
-                className="mb-3 text-dark"
+                className="mb-3 mt-4 text-dark"
                 label="Date Of Purchase"
-                name="firstName"
+                name=""
              
               >
                 <Form.Control type="date" value={form.dop} onChange={(e) => setField('dop',e.target.value)}></Form.Control>
@@ -133,7 +168,7 @@ const sendEmail = () => {
           </Row>
 
 
-          <FloatingLabel className="mb-3 text-primary" label="Delivery Address" name="firstName">
+          <FloatingLabel className="mb-3" label="Delivery Address" name="firstName">
             <Form.Control
               size="lg"
               type="text"
@@ -144,7 +179,7 @@ const sendEmail = () => {
 
           <Row className="mb-2 px-2">
 
-            <Button variant="outline-primary" size="lg" onClick={handlesubmit}>
+            <Button variant="outline-primary" size="lg" onClick={uploadPinata}>
               Submit
             </Button>
           </Row>
