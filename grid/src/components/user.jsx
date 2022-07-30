@@ -98,6 +98,7 @@ function RedeemNft() {
       console.log("res-> ",res.data);
     })
   }
+
   async function getMintedStatus(){
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
@@ -136,12 +137,11 @@ function RedeemNft() {
         <Col md={6}>
         <Form>
               <FloatingLabel
-                className="mb-4 mt-4"
-                label="hash"
-                controlId=""
-                
+                className="mb-3 mt-4 text-dark"
+                label="Name"
+                name="name"
               >
-              <Form.Control size="lg" type="text" placeholder="" value={ipfshash} onChange={(e) => setipfshash('hash',e.target.value)}/>
+                <Form.Control size="lg" type="text" placeholder="" value={ipfshash} onChange={(e) => setipfshash(e.target.value)}/>
               </FloatingLabel>
               <Button variant="primary" type="submit" size="lg" className="button mb-3" onClick={mintToken} active>Redeem</Button> 
         </Form>
