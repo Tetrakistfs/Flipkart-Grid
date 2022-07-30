@@ -141,7 +141,7 @@ function RedeemNft() {
                 controlId=""
                 
               >
-              <Form.Control size="lg" type="text" placeholder="" value={ipfshash} onChange={(e) => setipfshash('hash',e.target.value)}/>
+              <Form.Control size="lg" type="text" placeholder="x" value={ipfshash} onChange={(e) => setipfshash('hash',e.target.value)}/>
               </FloatingLabel>
               <Button variant="primary" type="submit" size="lg" className="button mb-3" onClick={mintToken} active>Redeem</Button> 
         </Form>

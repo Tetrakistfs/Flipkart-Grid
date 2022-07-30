@@ -85,7 +85,7 @@ const sendEmail = () => {
                 label="Name"
                 name="name"
               >
-                <Form.Control size="lg" type="text" placeholder="" value={form.firstName} onChange={(e) => setField('name',e.target.value)}/>
+                <Form.Control size="lg" type="text" placeholder="name" value={form.firstName} onChange={(e) => setField('name',e.target.value)}/>
               </FloatingLabel>
             </Col>
             <Col md={6}>
@@ -97,7 +97,7 @@ const sendEmail = () => {
                 controlId=""
               >
 
-                <Form.Control size="lg" type="text" placeholder="" value={form.productName} onChange={(e) => setField('productname',e.target.value)} />
+                <Form.Control size="lg" type="text" placeholder="name" value={form.productName} onChange={(e) => setField('productname',e.target.value)} />
               </FloatingLabel>
             </Col>
           </Row>
@@ -126,7 +126,7 @@ const sendEmail = () => {
                 name=""
                 
               >
-                <Form.Control size="lg" type="text" placeholder="" value={form.UserId} onChange={(e) => setField('userid',e.target.value)}/>
+                <Form.Control size="lg" type="text" placeholder="x" value={form.UserId} onChange={(e) => setField('userid',e.target.value)}/>
               </FloatingLabel>
             </Col>
             <Col md={4}>
@@ -148,7 +148,7 @@ const sendEmail = () => {
                 controlId=""
                 name="firstName"
               >
-                <Form.Control size="lg" type="text" placeholder="Swiftpharma" value={form.Retailer} onChange={(e) => setField('retailer',e.target.value)}/>
+                <Form.Control size="lg" type="text" placeholder="x" value={form.Retailer} onChange={(e) => setField('retailer',e.target.value)}/>
               </FloatingLabel>
             </Col>
             <Col sm={6}>
