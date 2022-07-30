@@ -2,18 +2,20 @@ import "./grid.css";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
+
 
 const Seller = () => {
-
+  const navigate = useNavigate();
   return (
     <section>
-      <SellerCard/>;
-      <ClassButton/>;
+      <SellerCard navigate={navigate}/>;
+      <ClassButton navigate={navigate}/>;
     </section>
   );
 };
 
-function SellerCard() {
+function SellerCard({navigate}) {
   return (
     <Container fluid="md my-4">
       <Card className="userCard mx-auto" style={{ width: "auto" }}>
@@ -31,7 +33,7 @@ function SellerCard() {
           <p className="fs-5 text-md-start mt-md-3 mb-3">
             1 din rah gya h mje to thik nhi lag rha.....
           </p>
-          <Button variant="primary" size="lg" className="text-dark" active>
+          <Button variant="primary" size="lg" className="text-dark" active onClick={() => {navigate("/seller/object")}}>
             Add Product
           </Button>
         </Card.Body>
@@ -39,10 +41,10 @@ function SellerCard() {
     </Container>
   );
 }
-function ClassButton() {
+function ClassButton({navigate}) {
   return (
     <div className="d-flex justify-content-center mb-2">
-      <Button variant="primary" size="lg">
+      <Button variant="primary" size="lg"  onClick={() => {navigate("/seller/class")}}>
         + Add New Class
       </Button>
     </div>

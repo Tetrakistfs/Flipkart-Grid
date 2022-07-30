@@ -7,19 +7,10 @@ import Button from "react-bootstrap/esm/Button";
 import { useNavigate } from 'react-router-dom';
 
 const Grid = () => {
+  const navigate = useNavigate();
   return (
     <Container fluid="md my-5">
       <Row xs={1} md={2} className="g-4 justify-content-md-center">
-        <IndexGrid
-        ></IndexGrid>
-      </Row>
-    </Container>
-  );
-};
-
-function IndexGrid() {
-  return (
-    <React.Fragment>
       <Card className="mx-auto userCard" style={{ width: "30rem" }}>
         <Card.Body>
           <p className="display-5 mb-3 text-md-start py-3 border-bottom text-warning" style={{fontWeight: "500"}}>
@@ -27,7 +18,7 @@ function IndexGrid() {
           </p>
           <p className="fs-5 text-md-start">Register Your Product,Add classes to them, Make NFT's...</p>
         </Card.Body>
-        <Button variant="primary" type="button" size="lg" className="mb-3" active>Seller</Button>
+        <Button variant="primary" type="button" size="lg" className="mb-3" active onClick={() => {navigate("/seller")}}>Seller</Button>
       </Card>
       <br />
       <Card className="mx-auto userCard" style={{ width: "30rem" }}>
@@ -37,11 +28,13 @@ function IndexGrid() {
           </p>
           <p className="fs-5 text-md-start">Redeem your product here, Validate your NFT's, Transfer Ownership...</p>
         </Card.Body>
-        <Button variant="primary" type="button" size="lg" className="mb-3" active>Buyer</Button>
+        <Button variant="primary" type="button" size="lg" className="mb-3" active onClick={() => {navigate("/buyer")}}>Buyer</Button>
       </Card>
       <br />
-    </React.Fragment>
+      </Row>
+    </Container>
   );
-}
+};
+
 
 export default Grid;

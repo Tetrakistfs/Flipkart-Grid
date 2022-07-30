@@ -7,17 +7,19 @@ import Button from "react-bootstrap/esm/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
+import { useNavigate } from 'react-router-dom';
 
 const UserInfo = () => {
+  const navigate = useNavigate();
   return (
     <section>
-      <UserGrid />
-      <RedeemNft />
+      <UserGrid navigate={navigate} />
+      <RedeemNft navigate={navigate} />
     </section>
   );
 }
  
-function UserGrid() {
+function UserGrid({navigate}) {
   return (
     <Container fluid="md my-5">
       <p className="display-4 text-warning mb-5 border-bottom">Registered Prodcuts </p>
@@ -27,6 +29,7 @@ function UserGrid() {
             <Card
               className="userCard mx-auto"
               style={{ width: "auto" }}
+              onClick={() => {navigate("/buyer/product")}}
             >
               <Card.Header>Header</Card.Header>
               <Card.Body>
