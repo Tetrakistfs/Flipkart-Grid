@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import { ContractFactory, ethers } from "ethers";
 import axios from "axios";
-// import Warranty from "../artifacts/contracts/Warranty.sol/Warranty.json";
+import Warranty from "../artifacts/contracts/Warranty.sol/Warranty.json";
 
 
 
@@ -104,29 +104,29 @@ function RedeemNft() {
     })
   }
 
-  // async function getMintedStatus(){
-  //   const provider = new ethers.providers.Web3Provider(window.ethereum);
-  //   const signer = provider.getSigner();
-  //   const contactAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-  //   const contract = new ethers.Contract(contactAddress, Warranty.abi, signer);
-  //   const result = await contract.isContentOwned(ipfshash);
-  //   console.log(result);
-  // }
+  async function getMintedStatus(){
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    const contactAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+    const contract = new ethers.Contract(contactAddress, Warranty.abi, signer);
+    const result = await contract.isContentOwned(ipfshash);
+    console.log(result);
+  }
 
-  // async function mintToken(){
-  //   const provider = new ethers.providers.Web3Provider(window.ethereum);
-  //   const signer = provider.getSigner();
-  //   const contactAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-  //   const contract = new ethers.Contract(contactAddress, Warranty.abi, signer);
-  //   const connection = contract.connect(signer);
-  //   const addr = connection.address;
-  //   const result = await contract.payToMint(addr, ipfshash, {
-  //     value: ethers.utils.parseEther('0.05'),
-  //   })
+  async function mintToken(){
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    const contactAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+    const contract = new ethers.Contract(contactAddress, Warranty.abi, signer);
+    const connection = contract.connect(signer);
+    const addr = connection.address;
+    const result = await contract.payToMint(addr, ipfshash, {
+      value: ethers.utils.parseEther('0.05'),
+    })
 
-  //   await result.wait();
-  //   getMintedStatus();
-  // }
+    await result.wait();
+    getMintedStatus();
+  }
 
   return (
     <Container fluid="md my-5" className="redeem outline">
@@ -148,7 +148,7 @@ function RedeemNft() {
               >
                 <Form.Control size="lg" type="text" placeholder="" value={ipfshash} onChange={(e) => setipfshash(e.target.value)}/>
               </FloatingLabel>
-              {/* <Button variant="primary" type="submit" size="lg" className="button mb-3" onClick={mintToken} active>Redeem</Button>  */}
+              <Button variant="primary" type="submit" size="lg" className="button mb-3" onClick={mintToken} active>Redeem</Button> 
         </Form>
         </Col>
         
