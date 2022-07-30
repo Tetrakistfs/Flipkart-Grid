@@ -144,7 +144,7 @@ const sendEmail = () => {
             <Col sm={6}>
               <FloatingLabel
                 className="mb-3 text-dark"
-                label="Retailor"
+                label="Retailer"
                 controlId=""
                 name="firstName"
               >
@@ -161,18 +161,18 @@ const sendEmail = () => {
                 <Form.Control
                   size="lg"
                   type="text"
-                  placeholder="Genshin Gang" value={form.Manufacturer} onChange={(e) => setField('manufacturer',e.target.value)}
+                  placeholder="" value={form.Manufacturer} onChange={(e) => setField('manufacturer',e.target.value)}
                 />
               </FloatingLabel>
             </Col>
           </Row>
 
 
-          <FloatingLabel className="mb-3" label="Delivery Address" name="firstName">
+          <FloatingLabel className="mb-3 text-dark" label="Delivery Address" name="firstName">
             <Form.Control
               size="lg"
               type="text"
-              Placeholder="Dauladhar" value={form.delivery} onChange={(e) => setField('delivery',e.target.value)}
+              Placeholder="" value={form.delivery} onChange={(e) => setField('delivery',e.target.value)}
               
             ></Form.Control>
           </FloatingLabel>
