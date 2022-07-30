@@ -3,10 +3,12 @@ import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
 import { useState, useEffect } from "react";
 import fire from "./firebase";
-import Seller from "./components/seller";
-import ObjectForm from "./components/object";
-import Grid from "./components/grid";
-
+import ProductDetail from "./components/ProductDetail";
+import UserInfo from "./user";
+import Grid from "./grid";
+import Seller from "./seller";
+import ObjectForm from "./object";
+import ClassForm from "./class";
 
 function App() {
   const [user, setUser] = useState("");

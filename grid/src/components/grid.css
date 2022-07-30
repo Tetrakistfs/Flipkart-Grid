@@ -5,23 +5,43 @@
 }
 
 body {
-    background: #2C3333;
+    background: #131313;
+}
+
+.index {
+    border: 2px solid #FFF323;
+    /* box-shadow: 2px 2px 5px 1px #FFF323; */
 }
 
 .product-img {
-    max-width: 200px;
+    max-width: 250px;
     height: 100%;
     object-fit: contain;
 }
 
 .form {
     border-radius: 20px;
-    box-shadow: 5px 5px 4px 5px #fdfbfb;
+    box-shadow: 5px 5px 4px 5px #213049;
     max-width: 85%;
+}
+
+.redeem {
+    border-radius: 10px;
+    min-height: 100px;
+}
+
+.outline {
+    border: 1px solid #FFF323;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.userCard {
+    color: white;
+    background: #1a263d;
+    /* border: 1px solid #FFF323; */
 }

@@ -5,7 +5,6 @@ import Nav from "./components/nav";
 import Grid from "./components/grid";
 import UserGrid from "./components/user";
 import ClassForm from "./components/class";
-
 import "./components/grid.css";
 
 //react bootstrap components

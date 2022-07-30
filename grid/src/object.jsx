@@ -1,4 +1,4 @@
-import "./grid.css";
+import "./components/grid.css";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
@@ -60,11 +60,9 @@ const sendEmail = () => {
                 
                 controlId=""
               >
-<<<<<<<< HEAD:grid/src/components/object.js
+
                 <Form.Control size="lg" type="text" placeholder="" value={form.LastName} onChange={(e) => setField('lastname',e.target.value)} />
-========
                 <Form.Control size="lg" type="text" placeholder="tfs" />
->>>>>>>> 55cad345dc6da25a1ceae6bfe5e11e6013438705:grid/src/object.jsx
               </FloatingLabel>
             </Col>
           </Row>
@@ -134,11 +132,8 @@ const sendEmail = () => {
             </Col>
           </Row>
 
-<<<<<<<< HEAD:grid/src/components/object.js
+
           <FloatingLabel className="mb-3 text-primary" label="Delivery Address" name="firstName">
-========
-          <FloatingLabel className="mb-3 text-dark" label="Delivery Address">
->>>>>>>> 55cad345dc6da25a1ceae6bfe5e11e6013438705:grid/src/object.jsx
             <Form.Control
               size="lg"
               type="text"
@@ -148,11 +143,8 @@ const sendEmail = () => {
           </FloatingLabel>
 
           <Row className="mb-2 px-2">
-<<<<<<<< HEAD:grid/src/components/object.js
+
             <Button variant="outline-primary" size="lg" onClick={handlesubmit}>
-========
-            <Button variant="primary" size="lg" active>
->>>>>>>> 55cad345dc6da25a1ceae6bfe5e11e6013438705:grid/src/object.jsx
               Submit
             </Button>
           </Row>

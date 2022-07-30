@@ -1,4 +1,4 @@
-import "./grid.css";
+import "./components/grid.css";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
